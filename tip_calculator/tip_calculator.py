@@ -35,7 +35,8 @@ class TipCalculator(tornado.web.RequestHandler):
     self.set_header(
       'Cache-Control',
       'no-store, no-cache, must-revalidate, max-age=0')
-    self.render('tip_calculator.html')
+    # self.render('tip_calculator.html')
+    self.render_template('tip_calculator.html', {})
 
 def make_app():
   return tornado.web.Application([

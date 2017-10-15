@@ -1,0 +1,40 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.tip {
+  width: 30%;
+  display: block;
+  margin: 10% auto 0 auto;
+  font-size: 1em;
+}
+
+.input {
+  margin-bottom: 1em;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  height: 2em;
+}
+
+.option {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+
+.wide {
+  width: 100%;
+}
+
+h1, h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.to_left {
+  text-align: left;
+}

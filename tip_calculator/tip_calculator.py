@@ -13,6 +13,11 @@ ENV = Environment(
   autoescape=select_autoescape(['html', 'xml'])
 )
 
+class TemplateHandler(tornado.web.RequestHandler):
+  def render_template (self, tpl, context):
+    template = ENV.get_template(tpl)
+    self.write(template.render(**context))
+
 class MainHandler(tornado.web.RequestHandler):
   def get(self):
     self.set_header("Content-Type", 'html')

@@ -1,5 +1,16 @@
+import boto3
+
+
 import tornado.ioloop
 import tornado.web
+
+from jinja2 import \
+  Environment, PackageLoader, select_autoescape
+
+ENV = Environment(
+  loader=PackageLoader('tip_calculator', 'templates'),
+  autoescape=select_autoescape(['html', 'xml'])
+)
 
 class MainHandler(tornado.web.RequestHandler):
   def get(self):

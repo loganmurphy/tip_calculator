@@ -38,3 +38,30 @@ h1, h2 {
 .to_left {
   text-align: left;
 }
+
+.modal {
+  background-color: white;
+  font-weight: bold;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 1.2em;
+  text-align: center;
+  position: fixed;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: black;
+  width: 400px;
+  height: 175px;
+  left: calc(50% - 200px);
+  top: calc(50% - 150px);
+  box-shadow: 10px 10px 5px #888888;
+  z-index: 2;
+  display: none;
+}
+
+#thanks {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+}

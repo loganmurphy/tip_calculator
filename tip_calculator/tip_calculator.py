@@ -9,7 +9,7 @@ from jinja2 import \
   Environment, PackageLoader, select_autoescape
 
 ENV = Environment(
-  loader=PackageLoader('tip_calculator', 'templates'),
+  loader=PackageLoader('app', 'templates'),
   autoescape=select_autoescape(['html', 'xml'])
 )
 
@@ -23,7 +23,7 @@ class MainHandler(tornado.web.RequestHandler):
     self.set_header("Content-Type", 'html')
 
 
-class TipCalculator(tornado.web.RequestHandler):
+class TipCalculator(TemplateHandler):
   def post(self):
       bill = self.get_body_argument('bill')
       service = self.get_body_argument('service')
@@ -33,7 +33,7 @@ class TipCalculator(tornado.web.RequestHandler):
       elif bill[0]  in ('1234567890'):
           tip = int(bill) * float(service)
           self.write("Your tip should be ${}".format(tip))
-          tip2 = tip
+        #   tip2 = tip
       else:
           self.write("Invalid input")
 

@@ -84,6 +84,7 @@ else:
           $('#message').text(`Your tip should be: $  ${Number(billCleaned * tip).toFixed(2)}`);
           $('#modal').show();
           $('#thanks').click(function(){
+            $('#bill').val('')
             $('#modal').hide();
           })
         })
